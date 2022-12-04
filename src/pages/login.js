@@ -30,7 +30,7 @@ const Login = () => {
       try {
         // 1. Lakukan Axios POST ke backend pada endpoint /login
         // dengan parameter 'email' dan 'pass' yang didapat dari form
-        const response = await axios.post('https://backendnew-rpb-env.up.railway.app/login', {
+        const response = await axios.post('https://localhost:3001/login', {
           email: data.get('email'),
           password: data.get('password')
         })

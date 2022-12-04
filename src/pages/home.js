@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import { axios } from 'axios'
+import axios from 'axios';
 import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -54,14 +54,14 @@ const Home = () => {
               const response = await axios.post('http://localhost:3001/verify', {
                 token: localStorage.getItem('token')
               })
-              if(response.status == 200){
+              if(response.status === 200){
                 setIsLogin(true)
               }else{
                 navigate('/login')
               }
               
             } catch (error) {
-              navigate('/login')
+            navigate('/login')
             }
   
         }
